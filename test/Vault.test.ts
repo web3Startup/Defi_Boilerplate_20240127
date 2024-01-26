@@ -12,6 +12,8 @@ describe("Vault", async () => {
         expect(v.address).not.eq(AddressZero);
         console.log(`${await v.getAmount()}`);
         console.log(`${await v.getUnlockTime()}`);
+
+        await v.setFeeAddress(AddressZero);
     });
 });
 
